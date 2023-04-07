@@ -1,0 +1,172 @@
+Capitulo 1- A Linguagem da Logica Proposicional
+
+1)
+a) não é formula logica proposicional, conforme a definição da regra do livro, item 1.2;
+b) é uma formula logica proposicional porem não conseguimos fazer uma forma simplificada, mediante conceito do item 1.2;
+c) é uma formula logica proposicional, contudo, não conseguimos realizar a simplificação
+d) não é uma formula logica proposicional, como descrito o conceito da 1.2
+e) é uma formula logica proposicional, contudo, não conseguimos realizar a simplificação
+
+2)
+a) Existe. Nesse caso a formula vai ser composto por um simbolo verdade (True) ou um simbolo proposicional.
+b) Possui 4, são eles símbolos de pontuação, símbolos proposicional, conectivos proposicionais e símbolos de verdade;
+c) Não, pois todas as formulas com conectivo possui algum simbolo de pontuação.
+
+3)
+a)H=((¬¬P ∨ Q) ↔ (P → Q)) ∧ P10.000
+Comp[H]=((¬¬P ∨ Q) ↔ (P → Q)) ∧ P10.000
+Comp[H]=((¬¬P ∨ Q) ↔ (P → Q)) comp[P10.000]+1
+Comp[H]=((¬¬P ∨ Q)(P → Q)) comp[P10.000]+1+1
+Comp[H]=((¬¬P ∨ Q)+comp[P]+comp[Q]+1+3
+Comp[H]=comp[P]+comp[Q]+1+1+1+6
+comp[H]=1+1+1+1+1+6
+comp[H]=11
+Subformula= {((¬¬P ∨ Q) ↔ (P → Q)) ∧ P10.000, P, Q, P10.000, ((¬¬P ∨ Q) ↔ (P → Q)), (P → Q),  , (¬¬P ∨ Q), ¬¬P,¬P}
+
+b)  H= P → ((Q → R) → ((P → R) → (P → R)))
+Comp[H] = Comp[P]+1+ ((Q → R) → ((P → R) → (P → R)))
+Comp[H] = 1+1+Comp[Q]+Comp[R]+1+1+1+(P → R)+(P → R)
+Comp[H] = 7+Comp[P]+Comp[R]+1+Comp[P]+Comp[R]+1
+Comp[H] = 7+1+1+1+1+1+1
+Comp[H] = 13
+
+Subformula{ P → ((Q → R) → ((P → R) → (P → R))), P, Q, R, ((Q → R) → ((P → R) → (P → R), (P → R)+(P → R)}
+
+c) H = ((P → ¬P) ↔ ¬P) ∨ Q
+Comp[H] = ((P → ¬P) ↔ ¬P) + Comp[Q] + 1
+Comp[H] = (P → ¬P) + Comp[P] + 1 + 1 + 2
+Comp[H] = Comp[P]+1+Comp[P]+1+5
+Comp[H] = 1 + 1 + 1 + 1 + 5
+Comp[H] = 9
+Subformula{((P → ¬P) ↔ ¬P) ∨ Q; P; Q; ((P → ¬P) ↔ ¬P); (P → ¬P)}
+
+d) H = ¬(P → ¬P)
+Comp[H] = 1 + Comp[P] + 1 + Comp[P] + 1
+Comp[H] = 5
+Subformula{¬(P → ¬P), P, ¬P, P-> }
+
+4)
+ a) ((¬(¬P)) ↔ ((¬((¬(¬(P ∨ Q))) → R)) ∧ P))
+((¬(¬P))<->((¬((¬¬(P V Q))-> R))^P))
+((¬(¬P)) <-> ((¬((¬¬(P V Q))-> R))^P))
+((¬¬P)<->((¬((¬¬(PVQ))->R))^P))
+
+b) Nada a retirar
+
+c)  (( P ∨Q) → (P → (¬Q)))
+( P ∨ Q) → (P → ¬Q)
+(P V Q) -> (P -> ¬Q)
+(P V Q) -> P ->¬Q
+5)
+a) P ∨ ¬Q → R → ¬R
+P V ¬ Q -> R <-> ¬ R 
+( P V ¬ Q) -> (R<-> ¬ R)
+(P V ¬ Q) -> (R <-> ¬ R))
+(P V(¬Q)) -> (R <-> (¬R))
+
+b)
+Q → ¬P ∧ Q
+Q → (¬P ∧ Q)
+Q → ¬(P ∧ Q)
+
+c)
+¬P ∨ Q ↔ Q
+(¬P ∨ Q) ↔ Q
+¬(P ∨ Q) ↔ Q
+¬(P ∨ Q ↔ Q)
+
+d)
+¬¬P → Q ≡ P ∧ P¬¬R
+Esta não é uma fórmula válida
+
+6)
+a)
+Exercício 3
+a) ∧ <-> ∨ ¬¬PQ ->PQtrue
+b) ->P->->QR->->PR->PR
+c) ∨ <->->P¬P¬PQ
+d) ¬ ->P¬P
+Exercício 4
+a) <-> ∧¬ -> ¬¬∨PQRP¬¬P
+b) <->-> ¬P∨QR<-> ∧PQ∨¬¬R¬P
+c) ->∨PQ->P¬Q
+
+7)
+Não consegui fazer
+
+8)
+Não consegui fazer
+
+10)
+a) Seria um numero impar
+
+b) é o dobro de conectivos, mais um
+
+Capitulo 2 – A Semantica da Logica Proposicional
+
+2) O termo Sintaxe refere-se ao que diz respeito aos símbolos. E a Semântica a interpretação das formulas
+
+3)  “^” = “e” Diferentemente do “V” com o conectivo “^” afirmo que eu vou no cinema e teatro
+“->” = Implica ou seja com esse conectivo implica que ao ir no cinema irei ao teatro como consequencia 
+“<->” =  bi-implicação com esse conectivo eu afirmo que ao ir no cinema também ira ao teatro, porem ao não ir no cinema com certeza não irei ao teatro
+“¬” = negação aqui eu nego uma sentença ou seja ¬cinema; não irei no cinema
+
+4)
+a) I[P] = T e/ou I[Q] = T
+b) I[Q] = T
+c) I[H] = T
+d) Não se pode concluir nada
+e) I[H] = F
+
+5)
+a)
+
+6) I[P -> Q] = T
+a) I[(P V R) -> (Q V R)]
+True
+b) I[(P ^ R) -> (Q ^ R)]
+True
+c) I[¬ P V Q) -> (P V Q)]
+Não conseguimos interpretar Nada
+
+Repetindo o exercício supondo I[P -> Q] = F
+a) I[(P V R) -> (Q V R)]
+Não conseguimos interpretar Nada
+b) I[(P ^ R) -> (Q ^ R)]
+Não conseguimos interpretar Nada
+c) I[¬ P V Q) -> (P V Q)]
+Falso
+
+7)
+(a) I[¬P ∧ Q]: Q deve ser verdadeiro.
+(b) I[P ∨ ¬Q]: Q pode ser verdadeiro ou falso.
+(c) I[Q → P]: Q implica que P deve ser verdadeiro.
+(d) I[(P ∧ R) ↔ (Q ∧ R)]: (P ∧ R) é verdadeiro se e somente se (Q ∧ R) é verdadeiro.
+(e) I[(P ∨ R) ↔ (Q ∨ R)]: (P ∨ R) é verdadeiro se e somente se (Q ∨ R) é verdadeiro.
+
+8)
+a) Se I[P] = F, temos que I[H] = F, pois, I[( P ∧ Q ) ↔ P] = T, I[( P ∨ Q ) ↔ Q] = T, I[ P → Q ] = T e I[( P → Q ) → ((( P ∧ Q ) ↔ P) ∧ (( P ∨ Q ) ↔ Q ))] = T, logo: I[(( P → Q ) → ((( P ∧ Q ) ↔ P) ∧ (( P ∨ Q ) ↔ Q ))) → P] = F b) Se I[P] = T, temos que I[H] = T, pois, I[Pˇ → F] = T, não importando o valor de P
+b) Se I[P] = T, temos que I[H] = T, pois, I[Pˇ → F] = T, não importando o valor de Pˇ
+
+10)
+a)
+
+12-a) É difícil representar Possivelmente irei ao cinema na lógica proposicional, pois a frase se refere a uma possibilidade e não a uma proposição definida.
+
+b) Seja p representando eu era gordo e q represente "estou magro hoje. A frase pode ser representada como p ∧ q, que significa "eu era gordo e hoje sou magro.
+
+c) Seja p representando "Há um aluno" e q represente "Todos os alunos o admiram". A frase pode ser representada como p ∧ q, que significa "Há um aluno admirado por todos no curso de Ciência da Computação".
+
+d) Seja p representando Há um aluno na minha classe e q represente Ele não gosta de nenhum de seus colegas. A frase pode ser representada como p ∧ q, que significa Tem um aluno na minha classe que não gosta de nenhum dos colegas."
+
+e) Seja p representando Há um estudante de Ciência da Computação e q represente Seus colegas o odeiam. A frase pode ser representada como p ∧ q, que significa Há um aluno de Ciência da Computação que é odiado pelos colegas.
+
+f) Seja p representando Algum político é desonesto. A frase pode ser representada como p, que significa Necessariamente algum político é desonesto.
+
+g) Seja p representando Amanhã irei ao cinema eq representa Irei ao teatro depois do cinema. A frase pode ser representada como p ∧ q, que significa Amanhã irei ao cinema e depois irei ao teatro.
+
+h) Seja p representando políticos e q represente desonesto. A frase pode ser representada como ¬(P)(P ∧ ¬Q), que significa Quase todo político é desonesto.
+
+i) Seja p representando Adalton e q represente João Augusto. A frase pode ser representada como (R)(P ∧ Q), que significa Adalton sempre foi amigo de João Augusto.
+
+j) Seja p represente Toda regra eq represente Tem uma exceção. A sentença pode ser representada como (R)(P → Q), que significa Toda regra tem uma exceção.
